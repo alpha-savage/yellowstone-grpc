@@ -20,5 +20,7 @@ tonic = { workspace = true }
 
 [build-dependencies]
 anyhow = { workspace = true }
-protobuf-src = { workspace = true }
 tonic-build = { workspace = true }
+
+[target.'cfg(not(target_os = "windows"))'.build-dependencies]
+protobuf-src = { workspace = true }
